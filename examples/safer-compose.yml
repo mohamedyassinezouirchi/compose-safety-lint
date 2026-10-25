@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx:alpine
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+    ports:
+      - "127.0.0.1:8080:80"
